@@ -90,9 +90,9 @@ const Home = () => {
 
       {/* Home */}
       <main
-        className={`${styles.container} py-10 flex flex-col lg:flex-row items-center gap-10 lg:px-5`}
+        className={`${styles.container}  py-10 flex flex-col lg:flex-row items-center gap-10 lg:px-5`}
       >
-        <div className="flex flex-col gap-10 lg:text-left">
+        <div className="flex flex-col gap-10">
           <div>
             <span className="py-[0.7rem] px-10 rounded-3xl bg-[#FFE6D6] text-[#FF8A00]">
               Restauran
@@ -104,10 +104,10 @@ const Home = () => {
             senectus dictum arcu sit tristique donec eget.
           </p>
           <div className="flex sm:flex-row justify-center lg:justify-start gap-5">
-            <Button className={"bg-[#FF8A00] px-10 text-white"}>
+            <Button className={"bg-[#FF8A00] px-8 text-white md:px-10"}>
               Order now
             </Button>
-            <Button className={"bg-[#3FA72F] px-10 text-white"}>
+            <Button className={"bg-[#3FA72F] px-8 text-white md:px-10"}>
               Reservation
             </Button>
           </div>
@@ -219,7 +219,7 @@ const Home = () => {
           <h4 className="text-[#5C4529] text-xl">
             {selectedTestimonial.title}
           </h4>
-          <blockquote className="leading-9 after:content-['“'] before:left-[-2rem] before:top-[1rem] quote after:right-[-2rem] after:bottom-[-1rem] before:content-['“'] relative w-full md:w-2/3 lg:w-1/2 mx-auto font-normal text-lg py-16">
+          <blockquote className="leading-9 after:right-0 after:bottom-0 after:content-['“'] md:before:left-[-2rem] before:left-0 before:top-[1rem] quote md:after:right-[-2rem] md:after:bottom-[-1rem] before:content-['“'] relative w-full md:w-2/3 lg:w-1/2 mx-auto font-normal text-lg py-16">
             {selectedTestimonial.quote}
           </blockquote>
         </div>

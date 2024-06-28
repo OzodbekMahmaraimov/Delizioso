@@ -54,7 +54,7 @@ const Navbar = () => {
             </Button>
             <div className="md:hidden flex items-center">
               <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
-                {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+                {isOpen ? <AiOutlineClose className="text-3xl" /> : <AiOutlineMenu className="text-3xl" />}
               </button>
             </div>
           </div>
