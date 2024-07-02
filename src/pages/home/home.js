@@ -5,6 +5,7 @@ import styles from "../../utils/styles";
 import welcomeImg from "../../assets/welcome.png";
 import Menu from "../../components/menu/menu";
 import Roundimg from "../../components/round-img/round-img";
+import tableimg from "../../assets/table.jpg";
 import Chef from "../../components/chef/chef";
 import chef1 from "../../assets/shef1.png";
 import chef2 from "../../assets/shef2.png";
@@ -19,6 +20,7 @@ import testimonial4 from "../../assets/testimonial4.png";
 import testimonial5 from "../../assets/testimonial5.png";
 import testimonial6 from "../../assets/testimonial6.png";
 import testimonial7 from "../../assets/testimonial7.png";
+import Footer from "../../components/footer/footer";
 
 // Testimonials
 const testimonials = [
@@ -149,7 +151,7 @@ const Home = () => {
       {/* /Welcome */}
 
       {/* Popular menu */}
-      <Menu />
+      <Menu name={'Our popular menu'} />
       {/* /Popular menu */}
 
       {/* Table */}
@@ -174,7 +176,7 @@ const Home = () => {
         </div>
 
         {/* Image */}
-        <Roundimg className="md:order-2" />
+        <Roundimg src={tableimg} className="md:order-2" />
       </section>
       {/* Table */}
 
@@ -209,21 +211,21 @@ const Home = () => {
         <h2 className={`${styles.heading} text-center`}>Our customers say</h2>
         <div className="text-center font-poppins">
           <img
-            className="mx-auto w-[40%] sm:w-[30%] md:w-[20%] object-cover rounded-full my-10"
+            className="mx-auto w-[40%] sm:w-[30%] md:w-[20%] object-cover rounded-full my-4"
             src={selectedTestimonial.image}
             alt={selectedTestimonial.name}
           />
-          <h3 className="text-[#311F09] text-2xl py-5">
+          <h3 className="text-[#311F09] text-2xl py-2">
             {selectedTestimonial.name}
           </h3>
           <h4 className="text-[#5C4529] text-xl">
             {selectedTestimonial.title}
           </h4>
-          <blockquote className="leading-9 after:right-0 after:bottom-0 after:content-['“'] md:before:left-[-2rem] before:left-0 before:top-[1rem] quote md:after:right-[-2rem] md:after:bottom-[-1rem] before:content-['“'] relative w-full md:w-2/3 lg:w-1/2 mx-auto font-normal text-lg py-16">
+          <blockquote className="leading-9 after:right-0 after:bottom-0 after:content-['“'] md:before:left-[-2rem] before:left-0 before:top-[1rem] quote md:after:right-[-2rem] md:after:bottom-0 before:content-['“'] relative w-full md:w-2/3 lg:w-1/2 mx-auto font-normal text-lg py-10">
             {selectedTestimonial.quote}
           </blockquote>
         </div>
-        <div className="flex justify-around flex-wrap mx-auto mt-20">
+        <div className="flex justify-around flex-wrap mx-auto mt-5 lg:mt-10">
           {testimonials.map((testimonial, index) => (
             <img
               key={index}
@@ -264,6 +266,10 @@ const Home = () => {
         </div>
       </section>
       {/* /Open time */}
+
+      {/* Footer */}
+      <Footer/>
+      {/* /Footer */}
     </>
   );
 };

@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SlBasket } from "react-icons/sl";
 import Button from "../button/Button";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? "text-[#FF8A00]" : "";
+  };
 
   return (
     <>
@@ -22,23 +27,23 @@ const Navbar = () => {
               Delizi<span className="text-[#FF8A00]">oso</span>
             </span>
           </div>
-          <ul className="hidden md:flex items-center gap-12">
-            <li className="text-[#FF8A00]">
+          <ul className="hidden lg:flex items-center gap-12">
+            <li className={getLinkClass("/")}>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className={getLinkClass("/menu")}>
               <Link to="/menu">Menu</Link>
             </li>
-            <li>
+            <li className={getLinkClass("/about")}>
               <Link to="/about">About us</Link>
             </li>
-            <li>
+            <li className={getLinkClass("/order")}>
               <Link to="/order">Order online</Link>
             </li>
-            <li>
+            <li className={getLinkClass("/reservation")}>
               <Link to="/reservation">Reservation</Link>
             </li>
-            <li>
+            <li className={getLinkClass("/contact")}>
               <Link to="/contact">Contact us</Link>
             </li>
           </ul>
@@ -52,36 +57,40 @@ const Navbar = () => {
             <Button className="hidden md:block bg-[#3FA72F] px-8 text-white hover:bg-[#3FA00F]">
               Log in
             </Button>
-            <div className="md:hidden flex items-center">
+            <div className="lg:hidden flex items-center">
               <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
-                {isOpen ? <AiOutlineClose className="text-3xl" /> : <AiOutlineMenu className="text-3xl" />}
+                {isOpen ? (
+                  <AiOutlineClose className="text-3xl" />
+                ) : (
+                  <AiOutlineMenu className="text-3xl" />
+                )}
               </button>
             </div>
           </div>
         </nav>
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <ul className="flex flex-col items-center gap-4">
-              <li className="text-[#FF8A00]">
+              <li className={getLinkClass("/")}>
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className={getLinkClass("/menu")}>
                 <Link to="/menu">Menu</Link>
               </li>
-              <li>
+              <li className={getLinkClass("/about")}>
                 <Link to="/about">About us</Link>
               </li>
-              <li>
+              <li className={getLinkClass("/order")}>
                 <Link to="/order">Order online</Link>
               </li>
-              <li>
+              <li className={getLinkClass("/reservation")}>
                 <Link to="/reservation">Reservation</Link>
               </li>
-              <li>
+              <li className={getLinkClass("/contact")}>
                 <Link to="/contact">Contact us</Link>
               </li>
               <Button className="bg-[#3FA72F] px-8 text-white hover:bg-[#3FA00F]">
-                tugma
+                Log In
               </Button>
             </ul>
           </div>

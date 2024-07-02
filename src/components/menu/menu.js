@@ -5,7 +5,7 @@ import Card from "../card/card";
 import Pagination from "../pagination/pagination";
 import homeImg from "../../assets/home.png";
 
-const Menu = () => {
+const Menu = ({name}) => {
   const [foods, setFoods] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10;
@@ -89,7 +89,7 @@ const Menu = () => {
 
   return (
     <section className={`${styles.container} px-4 sm:px-6 lg:px-8`}>
-      <h2 className={`${styles.heading} text-center`}>Our popular menu</h2>
+      <h2 className={`${styles.heading} text-center`}>{name}</h2>
       <div className="flex flex-wrap justify-around mt-10 gap-4">
         <Button
           onClick={() => chooseFoods("all")}
