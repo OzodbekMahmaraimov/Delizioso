@@ -1,7 +1,7 @@
 import { FaStar, FaRegStar } from "react-icons/fa";
 import Button from "../button/Button";
 
-const Card = ({ src, alt, name, star, price, children }) => {
+const Card = ({ src, alt, name, star, price, children, btnSize }) => {
   // Create an array with length 5, filled with the star type (filled or empty)
   const stars = Array.from({ length: 5 }, (v, i) =>
     i < star ? (
@@ -23,7 +23,7 @@ const Card = ({ src, alt, name, star, price, children }) => {
         <div className="flex items-center w-full justify-around mt-5">
           <h3 className="font-poppins text-2xl font-semibold">{price}</h3>
           <Button
-            className={"px-10 bg-[#FF8A00] text-white hover:bg-[#FF9A00]"}
+            className={`${btnSize} bg-[#FF8A00] text-white hover:bg-[#FF9A00]`}
           >
             Order now
           </Button>

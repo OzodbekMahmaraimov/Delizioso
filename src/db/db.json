@@ -1,0 +1,85 @@
+{
+  "pasta": [
+    {
+      "id": 1,
+      "img": "../../src/assets/pasta1.png",
+      "name": "Spaghetti",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    },
+    {
+      "id": 2,
+      "img": "",
+      "name": "Linguine",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    },
+    {
+      "id": 3,
+      "img": "",
+      "name": "Capellini",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    },
+    {
+      "id": 4,
+      "img": "",
+      "name": "Fettuccine",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    },
+    {
+      "id": 5,
+      "img": "",
+      "name": "Bucatini",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    },
+    {
+      "id": 6,
+      "img": "",
+      "name": "Tortellini",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    },
+    {
+      "id": 7,
+      "img": "",
+      "name": "Fusilli",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    },
+    {
+      "id": 8,
+      "img": "",
+      "name": "Farfalle",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    },
+    {
+      "id": 9,
+      "img": "",
+      "name": "Penne Alla Vodak",
+      "star": 5,
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam.",
+      "price": "$12.05",
+      "category": "dinner"
+    }
+  ]
+}

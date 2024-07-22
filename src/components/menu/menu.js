@@ -22,7 +22,6 @@ const Menu = ({name}) => {
     {
       id: 1,
       img: homeImg,
-      alt: "Spaghetti",
       name: "Spaghetti",
       star: 5,
       paragraph:
@@ -33,7 +32,6 @@ const Menu = ({name}) => {
     {
       id: 2,
       img: homeImg,
-      alt: "Gnocchi",
       name: "Gnocchi",
       star: 4,
       paragraph:
@@ -44,7 +42,6 @@ const Menu = ({name}) => {
     {
       id: 3,
       img: homeImg,
-      alt: "Ravioli",
       name: "Ravioli",
       star: 5,
       paragraph:
@@ -55,7 +52,6 @@ const Menu = ({name}) => {
     {
       id: 4,
       img: homeImg,
-      alt: "Penne Alla Vodka",
       name: "Penne Alla Vodka",
       star: 3,
       paragraph:
@@ -66,7 +62,6 @@ const Menu = ({name}) => {
     {
       id: 5,
       img: homeImg,
-      alt: "Risoto",
       name: "Risoto",
       star: 4,
       paragraph:
@@ -77,7 +72,6 @@ const Menu = ({name}) => {
     {
       id: 6,
       img: homeImg,
-      alt: "Splitza Signature",
       name: "Splitza Signature",
       star: 5,
       paragraph:
@@ -138,11 +132,12 @@ const Menu = ({name}) => {
           .map((item) => (
             <Card
               key={item.id}
-              alt={item.alt}
+              alt={item.name}
               src={item.img}
               name={item.name}
               star={item.star}
               price={item.price}
+              btnSize={"px-10"}
             >
               {item.paragraph}
             </Card>
